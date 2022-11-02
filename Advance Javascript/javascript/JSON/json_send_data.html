@@ -1,0 +1,15 @@
+
+<input type="submit"  onclick="test()">
+
+
+<script>
+function test()
+{
+	const myObj = { name: "John", age: 31, city: "New York" };
+	const myJSON = JSON.stringify(myObj);
+	console.log(myJSON);
+	
+	
+	window.location = "demo_json.php?x=" + myJSON;
+}
+</script>

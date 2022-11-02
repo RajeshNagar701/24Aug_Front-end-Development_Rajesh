@@ -1,0 +1,54 @@
+
+*{
+	margin:0px;
+	box-sizing:border-box;
+}
+
+.row{
+	display:flex;
+}
+
+.header{
+	
+	background-color:red;
+	height:auto;
+	width:100%;
+	float:left;
+	text-align:center;
+	color:white;
+	padding:10px;
+	
+}
+
+.sidebar{
+	background-color:LightGray;
+	height:auto;
+	width:15%;
+	float:left;
+	padding:10px;
+}
+
+.mainbar{
+	background-color:orange;
+	height:auto;
+	width:70%;
+	float:left;
+	padding:10px;
+}
+
+.box1{
+	
+	width:25%;
+	float:left;
+	padding:10px;
+	background:red;
+}
+
+.fbox{
+	background-color:black;
+	width:25%;
+	float:left;
+	height:auto;
+	color:white;
+	padding:10px;
+}

@@ -1,0 +1,22 @@
+<!--
+The filter() method creates a new array filled with elements that pass a test 
+provided by a function.
+
+The filter() method does not execute the function for empty elements.
+
+The filter() method does not change the original array.
+
+array.filter(function(currentValue, index, arr), thisValue)
+
+Return element
+-->
+
+<script>
+const ages = [32, 33, 12, 40];
+let myTwoTable=ages.filter(checkAge)
+function checkAge(age) {
+  return age > 12;
+}
+
+document.write(myTwoTable);
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  
+  animation-name: example;
+  animation-duration: 2s;
+  Animation-delay:2s;
+  animation-iteration-count: infinite;
+  animation-direction:alternate-reverse;
+
+}
+
+@keyframes example {
+  
+  0%{left:0px;top:0px;background-color:red}
+  25%{left:100px;top:0px;background-color:yellow;transform: rotate(90deg)}
+  50%{left:100px;top:100px;background-color:blue;transform: rotate(180deg)}
+  75%{left:0px;top:100px;background-color:pink;transform: rotate(270deg)}
+  100%{left:0px;top:0px;background-color:red;transform: rotate(360deg)}
+}
+
+
+
+
+</style>
+</head>
+<body>
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+<!--
+The position Property
+The position property specifies the type of positioning method used for an element.
+
+There are five different position values:
+
+static (default)
+relative
+fixed
+sticky
+absolute
+
+An element with position: static; is not positioned in any special 
+way; it is always positioned according to the normal flow of the 
+page:
+
+An element with position: relative; is positioned relative to 
+its normal position.
+Setting the top, right, bottom, and left properties of a 
+relatively-positioned element will cause it to be adjusted away 
+from its normal position. Other content will not be adjusted to 
+fit into any gap left by the element.
+
+An element with position: fixed; is positioned relative to the 
+viewport, which means it always stays in the same place even if 
+the page is scrolled. The top, right, bottom, and left properties 
+are used to position the element.
+
+
+An element with position: sticky; is positioned based on the 
+user's scroll position.
+
+
+position: absolute;
+An element with position: absolute; is positioned relative to 
+the nearest positioned ancestor (instead of positioned relative 
+to the viewport, like fixed).
+
+However; if an absolute positioned element has no positioned 
+ancestors, it uses the document body, and moves along with page 
+scrolling.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.box1{
+	width:100%;
+	height:50px;
+	background-color:red;
+	margin-top:20px;
+	position:static;
+}
+
+.boxmain{
+	width:80%;
+	height:50px;
+	background-color:yellow;
+	position:relative;
+	top:20px;
+	left:50px;
+}
+
+
+.box2{
+	width:100%;
+	height:50px;
+	background-color:green;
+}
+
+
+
+.fixed{
+	width:100%;
+	height:50px;
+	background-color:orange;
+	position:fixed;
+	top:20px;
+}
+
+.sticky{
+	width:100%;
+	height:50px;
+	background-color:blue;
+	position:sticky;
+	bottom:10px;
+}
+
+
+.abc{
+	width:100%;
+	height:auto;
+	border:solid 5px red;
+	position:relative;
+}
+
+</style>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p>
+<p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p>
+<p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p>
+
+<div class="sticky"></div>
+<div class="box1"></div>
+<div class="boxmain"></div>
+<div class="box2"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="fixed"></div>
+<p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p>
+<p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p>
+<p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p><p>Hio good morning</p>
+
+
+
+
+<div class="abc">
+	<h1 style=" position:absolute;top:50%;left:45%">Tops technologies</h1>
+	<img src="img1.jpg" width="100%">
+</div>
+
+</body>
+</html>

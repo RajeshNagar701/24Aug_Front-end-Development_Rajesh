@@ -1,0 +1,125 @@
+
+<!--
+
+
+FLUID WEBSITE LAYOUTS #
+In a fluid website layout, also referred to as a liquid layout, 
+the majority of the components inside have percentage widths, 
+and thus adjust to the user’s screen resolution.
+
+
+FIXED WEBSITE LAYOUTS #
+A fixed website layout has a wrapper that is a fixed width, 
+and the components inside it have either percentage widths or 
+fixed widths. The important thing is that the container (wrapper) 
+element is set to not move. No matter what screen resolution 
+the visitor has, he or she will see the same width as other visitors.
+
+EXAMPLES OF ELASTIC PAGE DESIGN #
+There is a third option when working with Web page layouts. 
+An elastic design is sometimes preferred by designers because it mixes
+the two other main layout types. It works by sizing all elements 
+with em’s. The quote below explains exactly what an em is and why 
+it can be beneficial.
+
+Elastic and fluid layouts are incredibly similar in appearance, 
+so much so that they are usually confused with each other. However, 
+elastic designs use em’s instead of percentages and depend primarily 
+on font size. These designs adjust to the text size that users set for 
+their browser.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.box1{
+background-color:red;
+height:auto;
+width:50%;
+float:left;
+}	
+
+.box2{
+background-color:yellow;
+height:auto;
+width:50%;
+float:left;
+}
+
+
+
+.box3{
+background-color:red;
+height:300px;
+width:300px;
+float:left;
+}	
+
+.box4{
+background-color:yellow;
+height:300px;
+width:300px;
+float:left;
+}
+
+
+.box5{
+background-color:red;
+height:auto;
+width:24.5em;
+font-size:2vw;
+float:left;
+}	
+
+.box6{
+background-color:yellow;
+height:auto;
+width:24.5em;
+float:left;
+font-size:2vw;
+}
+
+
+
+</style>
+
+</head>
+<body>
+<!-- Liquid Page Layout -->
+<!--
+<div class="box1">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+<div class="box2">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+
+-->
+
+
+<!-- Fixed Page Layout -->
+<!--
+<div class="box3">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+<div class="box4">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+-->
+
+
+<!-- Elastic Page Layout -->
+
+	<div class="box5">What is Lorem Ipsum?
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+
+
+	<div class="box6">What is Lorem Ipsum?
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+
+
+
+
+
+</body>
+</html>
