@@ -1,0 +1,18 @@
+
+  <button onclick="myFunction()">Insert</button>
+	<p>Click "Insert" to insert a paragraph after the header.</p>
+
+	<h2 id="myH2">My Header</h2>
+
+	<script>
+	function myFunction() {
+	  const h2 = document.getElementById("myH2");
+	  //document.getElementById("myH2").innerHTML="<p>My new paragraph.</p>";
+	  
+	 
+	  let html = "<p>My new paragraph.</p>";
+	  h2.insertAdjacentHTML("afterend", html);
+	}
+	</script>
+ 
+  
