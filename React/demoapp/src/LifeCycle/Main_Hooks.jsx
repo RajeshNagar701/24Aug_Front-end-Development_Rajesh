@@ -9,7 +9,7 @@ const [number2,setnumber2]=useState(1);
 
 useEffect(()=>{
     console.log('Main Mounted/updated');
-    },[number1,isImage]) ;    
+    },[number1]) ;    
     
   return (
     <div className='container mt-5'>

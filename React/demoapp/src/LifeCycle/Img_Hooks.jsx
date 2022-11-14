@@ -4,7 +4,7 @@ function Img_Hooks() {
    
 useEffect(()=>{
     console.log('DidMount 2');
-    return()=>{ console.log('Deleted'); }
+    return()=>{ alert('deleted')}
     },[])  
   return (
     <div>

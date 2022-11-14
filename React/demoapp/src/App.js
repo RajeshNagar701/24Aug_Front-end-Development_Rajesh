@@ -1,4 +1,9 @@
 import React from 'react'
+import Mainevent_Class from './event_binding/Mainevent_Class';
+import Mainevent_Func from './event_binding/Mainevent_Func';
+import Class_State from './LifeCycle/Class_State';
+import Main_Hooks from './LifeCycle/Main_Hooks';
+import Hooks_State from './State/Hooks_State';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -7,7 +12,8 @@ import React from 'react'
 //import MUI from "./MUI/MUI";
 //import Main from './Props/Header_Task/Main';
 //import Main_props from './Props/Main_props';
-import MainReactBootstrap from './ReactBootstrap/MainReactBootstrap';
+//import MainReactBootstrap from './ReactBootstrap/MainReactBootstrap';
+//import Class_State from './State/Class_State';
 
 //import Myvivek from './Mycomponent'
 //import FuncMain from './Function_comp/Main';
@@ -27,15 +33,27 @@ function App() {
 		<JSX_Com/>
 		<Type_css/>
 		<MUI/>
-
+		<MainReactBootstrap/>
 
 		// props 
 		<Main/>
 		<Main_props/>
-		*/}
-		
-		<MainReactBootstrap/>
 
+		// state
+		<Class_State/>
+		<Hooks_State/>
+
+		// Event Binding
+		<Mainevent_Class/>
+		<Mainevent_Func/>
+
+		<Class_State/>
+
+
+		*/}
+
+		<Main_Hooks/>
+		
 		
 		</>	
   );

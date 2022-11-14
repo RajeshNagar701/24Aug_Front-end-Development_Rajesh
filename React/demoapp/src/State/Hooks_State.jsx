@@ -10,7 +10,6 @@ const [age,setAge]=useState(31);
 const [number,setNumber]=useState(1);
 const [isImg,setisImg]=useState(false);
   
-
 return (
     <div className='container'>
         <button onClick={()=> {
