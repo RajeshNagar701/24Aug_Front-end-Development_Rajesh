@@ -13,6 +13,7 @@ import Service from './pages/Service';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 import Testimonial from './pages/Testimonial';
+import Basic from './pages/Basic';
 import NotFound from './pages/NotFound';
 
 import Header from "./component/Header";
@@ -33,6 +34,7 @@ function App() {
         <Route path="/service" element={ <><Header/><Service/> <Footer/></>}></Route>
         <Route path="/team" element={ <><Header/><Team/> <Footer/></>}></Route>
         <Route path="/contact" element={ <><Header/><Contact/> <Footer/></>}></Route>
+        <Route path="/basic" element={ <><Header/><Basic/> <Footer/></>}></Route>
         <Route path="/testimonial" element={ <><Header/><Testimonial/><Footer/></> }></Route>
         <Route path="*" element={<NotFound />} />
     </Routes>
