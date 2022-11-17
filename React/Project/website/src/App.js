@@ -11,7 +11,7 @@ import Price from './pages/Price';
 import Product from './pages/Product';
 import Service from './pages/Service';
 import Team from './pages/Team';
-import Contact from './pages/Contact';
+import Signup from './pages/Signup';
 import Testimonial from './pages/Testimonial';
 import Basic from './pages/Basic';
 import NotFound from './pages/NotFound';
@@ -33,7 +33,7 @@ function App() {
         <Route path="/product" element={ <><Header/><Product/> <Footer/></>}></Route>
         <Route path="/service" element={ <><Header/><Service/> <Footer/></>}></Route>
         <Route path="/team" element={ <><Header/><Team/> <Footer/></>}></Route>
-        <Route path="/contact" element={ <><Header/><Contact/> <Footer/></>}></Route>
+        <Route path="/signup" element={ <><Header/><Signup/> <Footer/></>}></Route>
         <Route path="/basic" element={ <><Header/><Basic/> <Footer/></>}></Route>
         <Route path="/testimonial" element={ <><Header/><Testimonial/><Footer/></> }></Route>
         <Route path="*" element={<NotFound />} />
