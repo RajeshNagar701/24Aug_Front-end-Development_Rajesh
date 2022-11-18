@@ -16,7 +16,6 @@ function Basic() {
 
         setformvalue({...formvalue,[e.target.name]:e.target.value, id:new Date().getTime().toString()});
         //console.log(formvalue);
-
     }
 
     const onsubmithandel=(e)=>{
