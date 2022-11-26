@@ -1,21 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import swal from 'sweetalert';
 import axios from 'axios';
+import { Outlet, Link , NavLink,useNavigate } from "react-router-dom";
 
 
 
 
 function Signup() {
+    
+    const redirect=useNavigate();    
+    useEffect(()=>{
+       
+        if(localStorage.getItem('email'))
+        {
+            redirect('/index');
+        }
+    },[]);
+
 
 
     const [formvalue, setformvalue] = useState({
         name: "",
         email: "",
         password: "",
-        number: ""
+        number: "",
+        returnSecureToken:""
     })
     const onchangehandel = (e) => {
-        setformvalue({ ...formvalue, [e.target.name]: e.target.value });
+        setformvalue({ ...formvalue, [e.target.name]: e.target.value,returnSecureToken:true });
         console.log(formvalue);
     }
 
@@ -51,17 +63,27 @@ function Signup() {
     // Second method by axios
     const onsubmithandel = async (e) => {
         e.preventDefault();
-        const res = await axios.post(`https://vivek-8d814-default-rtdb.firebaseio.com/customer.json`, formvalue);
-        if (res.status === 200) {
-            setformvalue({ name: "", email: "", password: "", number: "" });
-            swal({
-                title: "Success",
-                text: "Registration Success",
-                icon: "success",
-                button: "Aww yiss!",
-            });
-            getdata();
-        }
+
+        const res = await axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAoP6yWNgW7mwf5QOXYdSSFmM1sjv27zzc`, formvalue);
+        if (res.status === 200) 
+        {
+            const res = await axios.post(`https://vivek-8d814-default-rtdb.firebaseio.com/customer.json`, formvalue);
+            if (res.status === 200) {
+                setformvalue({ name: "", email: "", password: "", number: "" });
+                swal({
+                    title: "Success",
+                    text: "Registration Success",
+                    icon: "success",
+                    button: "Aww yiss!",
+                });
+                getdata();
+            }
+        }    
+
+
+
+
+        
     }
 
     //=====================================================================
@@ -226,11 +248,15 @@ const onchangehandel1 = (e) => {
                                     </div>
                                     <div className="col-12">
                                         <button className="btn btn-primary w-100 py-3" onClick={onsubmithandel} type="submit">Signup</button>
+                                        <Link to="/login" className="btn btn-primary w-100 py-3 mt-3">Login <i className="bi bi-arrow-right" /></Link>
                                     </div>
+                                    
                                 </div>
-                            </form>
-                        </div>
 
+                            </form>
+                            
+                        </div>
+                        
 
 
                         <div className="col-lg-5">
@@ -247,7 +273,7 @@ const onchangehandel1 = (e) => {
                                     </thead>
                                     <tbody>
                                         {
-                                            Object.keys(data).map((item, index) => {
+                                           data && Object.keys(data).map((item, index) => {
                                                 const { name, email, number } = data[item]
                                                 return (
                                                     <tr>
@@ -303,6 +329,7 @@ const onchangehandel1 = (e) => {
                                         <div className="modal-footer">
                                             <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>

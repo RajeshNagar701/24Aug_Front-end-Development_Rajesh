@@ -1,9 +1,19 @@
 import React from 'react'
-
-import { Outlet, Link , NavLink } from "react-router-dom";
+import swal from 'sweetalert'
+import {Link , NavLink, useNavigate } from "react-router-dom";
 
 
 function Header() {
+
+  const redirect=useNavigate();
+  function logout()
+  {
+    localStorage.removeItem('auth_id');
+    localStorage.removeItem('email');
+    swal("Success", "Logout Success", "success");
+    redirect('/index')
+  }  
+
     return (
         <>
             <div>
@@ -24,6 +34,18 @@ function Header() {
                                 <div className="text-start">
                                     <h6 className="text-uppercase mb-1">Email Us</h6>
                                     <span>info@example.com</span>
+                                   
+                                    {(() => {
+                                    
+                                    if(localStorage.getItem('email'))
+                                    {
+                                        return (
+                                               <p>Hi .. {localStorage.getItem('email')}</p> 
+                                             )  
+                                    }
+                                  
+                                 })()}
+                                    
                                 </div>
                             </div>
                         </div>
@@ -61,14 +83,31 @@ function Header() {
                                     <NavLink to="/detail" className="dropdown-item">Blog Detail</NavLink>
                                 </div>
                             </div>
+                            
+                           
                             <div className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Crud</a>
                                 <div className="dropdown-menu m-0">
                                     <NavLink to="/basic" className="dropdown-item">Basic</NavLink>
                                 </div>
                             </div>
-                            <NavLink to="/signup" className="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact <i className="bi bi-arrow-right" /></NavLink>
-                        </div>
+
+                            {(() => {
+                                    
+                                    if(localStorage.getItem('auth_id'))
+                                    {
+                                        return (
+                                            <NavLink to="/index" onClick={logout} className="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Logout <i className="bi bi-arrow-right" /></NavLink>
+                                             )  
+                                    }
+                                    else 
+                                    {
+                                        return (<><NavLink to="/signup" className="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Signup <i className="bi bi-arrow-right" /></NavLink></>)
+                                    }
+                                 })()}
+
+                          
+                        </div>  
                     </div>
                 </nav>
             </div>

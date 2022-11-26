@@ -14,6 +14,7 @@ import Team from './pages/Team';
 import Signup from './pages/Signup';
 import Testimonial from './pages/Testimonial';
 import Basic from './pages/Basic';
+import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 
 import Header from "./component/Header";
@@ -35,6 +36,7 @@ function App() {
         <Route path="/team" element={ <><Header/><Team/> <Footer/></>}></Route>
         <Route path="/signup" element={ <><Header/><Signup/> <Footer/></>}></Route>
         <Route path="/basic" element={ <><Header/><Basic/> <Footer/></>}></Route>
+        <Route path="/login" element={ <><Header/><Login/> <Footer/></>}></Route>
         <Route path="/testimonial" element={ <><Header/><Testimonial/><Footer/></> }></Route>
         <Route path="*" element={<NotFound />} />
     </Routes>
