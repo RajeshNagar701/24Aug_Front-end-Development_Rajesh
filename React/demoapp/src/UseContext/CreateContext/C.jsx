@@ -1,8 +1,8 @@
 import React,{useContext} from 'react'
-import {NameContext} from './UseContextmain'
+import {MyContext} from './UseContextmain'
 
 function C() {
-  const {name,Setname,age,Setage} = useContext(NameContext);
+  const {name,Setname,age,Setage} = useContext(MyContext);
   return (
     <div>
       <button onClick={()=>{

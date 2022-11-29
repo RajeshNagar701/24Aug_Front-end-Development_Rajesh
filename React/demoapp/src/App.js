@@ -4,6 +4,9 @@ import Mainevent_Func from './event_binding/Mainevent_Func';
 import Class_State from './LifeCycle/Class_State';
 import Main_Hooks from './LifeCycle/Main_Hooks';
 import Hooks_State from './State/Hooks_State';
+import UseContextmain from './UseContext/CreateContext/UseContextmain';
+import PropsDrilling from './UseContext/PropsDrilling/PropsDrilling';
+import Reducertask from './useReducer/Reducertask';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -47,12 +50,18 @@ function App() {
 		<Mainevent_Class/>
 		<Mainevent_Func/>
 
+		//lifecycle
 		<Class_State/>
+		<Main_Hooks/>
 
-
+		//props drilling / use context 
+		<PropsDrilling/>
+		<UseContextmain/>
 		*/}
 
-		<Main_Hooks/>
+		
+		<Reducertask/>
+		
 		
 		
 		</>	

@@ -4,7 +4,7 @@ import B from './B'
 function A({name}) {
   return (
     <div>
-        <h1>My name is  from A</h1>
+        <h1>child:  My name is from A</h1>
         <B name={name}/>
     </div>
   )

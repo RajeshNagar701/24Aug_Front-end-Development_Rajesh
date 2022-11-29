@@ -20,6 +20,9 @@ function Reducertask() {
         name: "Rajesh",
         number: 0
     }
+    
+
+
 
     const [state1, dispatch1] = useReducer(Reducer, initistate);
 
